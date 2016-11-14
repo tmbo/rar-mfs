@@ -18,6 +18,7 @@ The Relevance and Redundancy Framework (RaR), which is the theory behind the imp
 
 ## Algorithm
 Abstract overview of the different steps of the proposed feature selection algorithm:
+
 ![Algorithm Overview](https://github.com/tmbo/rar-mfs/blob/master/docu/images/algorithm_overview.png)
 
 The Relevance and Redundancy ranking framework (RaR) is a method able to handle large scale data sets and data sets with mixed features. Instead of directly selecting a subset, a feature ranking gives a more detailed overview into the relevance of the features. 
