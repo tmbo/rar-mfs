@@ -28,12 +28,12 @@ TODO: reference published maven central build
       ...
     ``` 
 - OR download the prebuild binary which requires only an installation of a recent java version (>= 6)
-    1. 
-    2. run `java `
+    1. download the prebuild jar from the [releases tab](https://github.com/tmbo/rar-mfs/releases)
+    2. run `java -jar rar-mfs-1.0.jar --help`
 
-    Using the prebuild jar, this gets even easier:
+    Using the prebuild jar, our previous example gets even easier:
     ```sh
-    rar-mfs > java "run arff --samples 100 --subsetSize 5 --nonorm example-dataset/heart-c.arff"
+    rar-mfs > java -jar rar-mfs-1.0.jar arff --samples 100 --subsetSize 5 --nonorm example-dataset/heart-c.arff
     Feature Ranking:
       1 - age (12)
       2 - sex (8)
