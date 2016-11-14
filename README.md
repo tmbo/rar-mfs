@@ -43,5 +43,8 @@ The method consists of a multistep approach where we
 ## License
 Current license is CC BY-NC 4.0. The complete license can be found at [creativecommons](http://creativecommons.org/licenses/by-nc/4.0/legalcode) 
 
-![HPI KDDM Group](https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/images/hpi_logo_fb_KnowlDiscoveryDataMining_web80.png)
-
+<p>
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Bosch-brand.svg/320px-Bosch-brand.svg.png"/>
+  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+  <img src="https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/images/hpi_logo_fb_KnowlDiscoveryDataMining_web80.png"/>
+</p>
