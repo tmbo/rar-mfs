@@ -7,7 +7,7 @@ The Relevance and Redundancy Framework (RaR), which is the theory behind the imp
 - handles multivariate correlations.
 
 ## Installation
-The tool is written in scala and uses the weka framework to load and handle data sets. You can either run it independently providing the data as an `.arff` or `.csv` file or you can include the algorithm as a (maven / ivy) dependency in your project. As an example data set we use [heart-c](http://www.cs.umb.edu/~rickb/files/UCI/heart-c.arff).
+The tool is written in scala and uses the weka framework to load and handle data sets. You can either run it independently providing the data as an `.arff` or `.csv` file or you can include the algorithm as a (maven / ivy) dependency in your project. As an example data set we use [heart-c](http://www.cs.umb.edu/~rickb/files/UCI/heart-c.arff). 
 
 ### Project dependency
 TODO: reference published maven central build
@@ -40,6 +40,9 @@ TODO: reference published maven central build
       3 - cp (11)
       ...
     ``` 
+    
+### [Optional]
+To speed up the algorithm, consider using a fast solver such as Gurobi (http://www.gurobi.com/). Install the solver and put the provided `gurobi.jar` into the java classpath. 
 
 ## Algorithm
 ### Idea
