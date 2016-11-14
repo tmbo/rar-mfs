@@ -1,5 +1,3 @@
-![HPI KDDM Group](https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/images/hpi_logo_fb_KnowlDiscoveryDataMining_web80.png)
-
 # rar-mfs
 rar-mfs is an algorithm for feature selection and can be employed to select features from labled data sets. 
 
@@ -44,3 +42,6 @@ The method consists of a multistep approach where we
 | *k* - sample set size          | 5       | Maximum size of the subsets to be selected in the sampling phase|
 ## License
 Current license is CC BY-NC 4.0. The complete license can be found at [creativecommons](http://creativecommons.org/licenses/by-nc/4.0/legalcode) 
+
+![HPI KDDM Group](https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/images/hpi_logo_fb_KnowlDiscoveryDataMining_web80.png)
+
