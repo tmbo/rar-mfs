@@ -94,7 +94,7 @@ The method consists of a multistep approach where we
 | *n* - sampling itertations     | 1000    | Number of different subsets to select in the sampling phase|
 | *k* - sample set size          | 5       | Maximum size of the subsets to be selected in the sampling phase|
 ## License
-Current license is CC BY-NC 4.0. The complete license can be found at [creativecommons](http://creativecommons.org/licenses/by-nc/4.0/legalcode) 
+Current license is CC BY-NC 4.0. The complete license can be found at [creativecommons](http://creativecommons.org/licenses/by-nc/4.0/legalcode). For commercial licensing please contact the author.
 
 <p>
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Bosch-brand.svg/320px-Bosch-brand.svg.png"/>
