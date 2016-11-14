@@ -1,4 +1,4 @@
-# rar-mfs
+# Relevance and Redundancy Framework (rar-mfs)
 rar-mfs is an algorithm for feature selection and can be employed to select features from labled data sets. 
 
 The Relevance and Redundancy Framework (RaR), which is the theory behind the implementation, is a novel feature selection algorithm that 
@@ -37,6 +37,7 @@ val algorithm = new RaRSearch(
 
 algorithm.selectFeatures(dataSet)
 ```
+WARN: there is still a dependency that is not published to maven central (optimus). To use the package you need to locally publish my optimus fork ([link](https://github.com/tmbo/Optimus/tree/development), pending for merge).
 
 ### Command line tool
 - EITHER download the prebuild binary which requires only an installation of a recent java version (>= 6)
@@ -93,7 +94,7 @@ The method consists of a multistep approach where we
 | *n* - sampling itertations     | 1000    | Number of different subsets to select in the sampling phase|
 | *k* - sample set size          | 5       | Maximum size of the subsets to be selected in the sampling phase|
 ## License
-Current license is CC BY-NC 4.0. The complete license can be found at [creativecommons](http://creativecommons.org/licenses/by-nc/4.0/legalcode) 
+Current license is CC BY-NC 4.0. The complete license can be found at [creativecommons](http://creativecommons.org/licenses/by-nc/4.0/legalcode). For commercial licensing please contact the author.
 
 <p>
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/Bosch-brand.svg/320px-Bosch-brand.svg.png"/>
