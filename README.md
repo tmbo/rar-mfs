@@ -10,7 +10,33 @@ The Relevance and Redundancy Framework (RaR), which is the theory behind the imp
 The tool is written in scala and uses the weka framework to load and handle data sets. You can either run it independently providing the data as an `.arff` or `.csv` file or you can include the algorithm as a (maven / ivy) dependency in your project. As an example data set we use [heart-c](http://www.cs.umb.edu/~rickb/files/UCI/heart-c.arff). 
 
 ### Project dependency
-TODO: reference published maven central build
+The project is published to maven central ([link](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22rar-mfs%22)). To depend on the project use:
+- maven
+    ```xml
+    <dependency>
+      <groupId>de.hpi.kddm</groupId>
+      <artifactId>rar-mfs_2.11</artifactId>
+      <version>1.0.1</version>
+    </dependency>
+    ```
+    
+- sbt:
+    ```sbt
+    libraryDependencies += "de.hpi.kddm" %% "rar-mfs" % "1.0.1"
+    ```
+  
+To run the algorithm use
+```scala
+import de.hpi.kddm.rar._
+
+// ...
+val dataSet = de.hpi.kddm.rar.Runner.loadCSVDataSet(new File("heart-c.csv", isNormalized = false, "")
+val algorithm = new RaRSearch(
+      HicsContrastPramsFA(numIterations = config.samples, maxRetries = 1, alphaFixed = config.alpha, maxInstances = 1000),
+      RaRParamsFixed(k = 5, numberOfMonteCarlosFixed = 5000, parallelismFactor = 4))
+
+algorithm.selectFeatures(dataSet)
+```
 
 ### Command line tool
 - EITHER download the prebuild binary which requires only an installation of a recent java version (>= 6)
