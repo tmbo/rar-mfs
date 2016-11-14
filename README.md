@@ -1,3 +1,5 @@
+![HPI KDDM Group](https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/images/hpi_logo_fb_KnowlDiscoveryDataMining_web80.png)
+
 # rar-mfs
 rar-mfs is an algorithm for feature selection and can be employed to select features from labled data sets. 
 
