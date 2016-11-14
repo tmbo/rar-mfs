@@ -17,7 +17,7 @@ TODO: reference published maven central build
     1. download the prebuild jar from the [releases tab](https://github.com/tmbo/rar-mfs/releases)
     2. run `java -jar rar-mfs-1.0.jar --help`
 
-    Using the prebuild jar, here is an example usage ):
+    Using the prebuild jar, here is an example usage:
     ```sh
     rar-mfs > java -jar rar-mfs-1.0.jar arff --samples 100 --subsetSize 5 --nonorm heart-c.arff
     Feature Ranking:
