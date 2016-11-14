@@ -11,12 +11,15 @@ The Relevance and Redundancy Framework (RaR), which is the theory behind the imp
 - handles multivariate correlations.
 
 ## Installation
+The tool is written in scala and uses the weka framework to load and handle data sets. 
 
 ### As a dependency
+
 
 ### As a cmd tool
 
 ## Algorithm
+### Idea
 Abstract overview of the different steps of the proposed feature selection algorithm:
 
 ![Algorithm Overview](https://github.com/tmbo/rar-mfs/blob/master/docu/images/algorithm_overview.png)
@@ -30,5 +33,12 @@ The method consists of a multistep approach where we
   
   3. create the best possible ranking given the sampled insights.
 
+### Parameters
+| Parameter  | Default value | Description |
+| ---------- | ------------- | ------------|
+| *m* - contrast iterations      | 100     | Number of different slices to evaluate while comparing marginal and conditional probabilities |
+| *alpha* - subspace slice size | 0.01    | Percentage of all instances to use as part of a slice which is used to compare distributions |
+| *n* - sampling itertations     | 1000    | Number of different subsets to select in the sampling phase|
+| *k* - sample set size          | 5       | Maximum size of the subsets to be selected in the sampling phase|
 ## License
 Current license is CC BY-NC 4.0. The complete license can be found at [creativecommons](http://creativecommons.org/licenses/by-nc/4.0/legalcode) 
