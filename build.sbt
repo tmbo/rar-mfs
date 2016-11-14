@@ -67,7 +67,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.scala-logging" %% "scala-logging" % "3.4.0",
   "com.github.vagm" %% "optimus" % "2.0.0-SNAPSHOT",
   "com.github.vagm" %% "optimus-solver-gurobi" % "2.0.0-SNAPSHOT",
-  "org.apache.commons" % "commons-lang3" % "3.4"
+  "org.apache.commons" % "commons-lang3" % "3.4",
+  "com.github.scopt" %% "scopt" % "3.5.0"
 )
 
 fork in run := true

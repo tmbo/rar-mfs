@@ -148,7 +148,7 @@ class RaRSearch(val hicsParams: HiCSContrastParams, val prcParams: RaRParams)
         // Log progress
         val i = progressCounter.getAndIncrement()
         if (i % 10 == 0)
-          logger.debug(s"Finished ${i.toDouble / numberOfTries * 100}%")
+          logger.debug(s"Finished ${(i.toDouble / numberOfTries * 100).toInt}%")
         s
       }
 
