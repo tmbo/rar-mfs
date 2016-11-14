@@ -1,4 +1,4 @@
-import ReleaseTransformations._
+import sbtrelease.ReleasePlugin.autoImport.ReleaseTransformations._
 
 name := "rar-mfs"
 
@@ -56,20 +56,29 @@ scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
   "com.github.tototoshi" %% "scala-csv" % "1.3.0",
-  "org.scalanlp" %% "breeze" % "0.12" ,
+  "org.scalanlp" %% "breeze" % "0.12",
   // native libraries are not included by default. add this if you want them (as of 0.7)
   // native libraries greatly improve performance, but increase jar sizes.
   // It also packages various blas implementations, which have licenses that may or may not
   // be compatible with the Apache License. No GPL code, as best I know.
   "org.scalanlp" %% "breeze-natives" % "0.12",
-  "nz.ac.waikato.cms.weka" % "weka-stable" % "3.8.0",
-  "ch.qos.logback" %  "logback-classic" % "1.1.7",
+  ("nz.ac.waikato.cms.weka" % "weka-stable" % "3.8.0").exclude("nz.ac.waikato.cms.weka.thirdparty", "thirdparty"),
+  "ch.qos.logback" % "logback-classic" % "1.1.7",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.4.0",
   "com.github.vagm" %% "optimus" % "2.0.0-SNAPSHOT",
   "com.github.vagm" %% "optimus-solver-gurobi" % "2.0.0-SNAPSHOT",
   "org.apache.commons" % "commons-lang3" % "3.4",
   "com.github.scopt" %% "scopt" % "3.5.0"
 )
+
+mainClass in assembly := Some("de.hpi.kddm.rar.Runner")
+
+assemblyMergeStrategy in assembly := {
+  case PathList("java_cup", xs@_*) => MergeStrategy.first
+  case x =>
+    val oldStrategy = (assemblyMergeStrategy in assembly).value
+    oldStrategy(x)
+}
 
 fork in run := true
 
