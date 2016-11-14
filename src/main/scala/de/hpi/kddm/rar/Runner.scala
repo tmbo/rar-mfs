@@ -1,13 +1,12 @@
 package de.hpi.kddm.rar
 
 import java.io.{BufferedReader, File, FileReader}
-import java.nio.file.Path
 
 import com.typesafe.scalalogging.LazyLogging
 import de.hpi.kdd.rar.RaRSearch
 import de.hpi.kdd.rar.RaRSearch.RaRParamsFixed
 import de.hpi.kdd.rar.dataset.WekaDataSet
-import de.hpi.kdd.rar.hics.{HicsContrastPramsAA, HicsContrastPramsFA}
+import de.hpi.kdd.rar.hics.HicsContrastPramsFA
 import weka.core.Instances
 import weka.core.converters.CSVLoader
 import weka.filters.Filter
@@ -16,7 +15,9 @@ import weka.filters.unsupervised.attribute.Remove
 import scala.reflect.ClassTag
 
 sealed trait DataSetType
+
 case class ArffDataSet() extends DataSetType
+
 case class CSVDataSet(hasHeader: Boolean = true, nominalFeatures: Seq[Int] = Seq.empty) extends DataSetType
 
 case class Config(
@@ -33,8 +34,10 @@ case class Config(
   }
 }
 
-
-object Runner extends LazyLogging{
+/**
+  * Runner to use the algorithm as a command line tool
+  */
+object Runner extends LazyLogging {
   /**
     * Load a dataset from a CSV file. Since, a CSV doesn't contain all the necessary information an ARFF file contains
     * a couple of parameters need to be specified to make up for that gap.
@@ -67,7 +70,7 @@ object Runner extends LazyLogging{
       data.setClassIndex(data.numAttributes() + idxOfClassAttr)
     else
       data.setClassIndex(idxOfClassAttr)
-    val instances = if(isNormalized) data else WekaDataSet.standardize(data)
+    val instances = if (isNormalized) data else WekaDataSet.standardize(data)
 
     logger.info(s"Loaded dataset '${file.getName}'. Summary: " + data.toSummaryString)
 
@@ -83,7 +86,7 @@ object Runner extends LazyLogging{
     val reader = new BufferedReader(new FileReader(file))
     val data = new Instances(reader)
     data.setClassIndex(data.numAttributes() - 1)
-    val instances = if(isNormalized) data else WekaDataSet.standardize(data)
+    val instances = if (isNormalized) data else WekaDataSet.standardize(data)
 
     logger.info(s"Loaded dataset '$name'. Summary: " + data.toSummaryString)
 
@@ -92,7 +95,7 @@ object Runner extends LazyLogging{
 
   private def runAlgorithm(config: Config) = {
     val algorithm = new RaRSearch(
-      HicsContrastPramsFA(numIterations = config.samples, maxRetries = 1, alphaFixed=config.alpha, maxInstances = 1000),
+      HicsContrastPramsFA(numIterations = config.samples, maxRetries = 1, alphaFixed = config.alpha, maxInstances = 1000),
       RaRParamsFixed(k = 5, 5000, parallelismFactor = 4))
 
     val dataSet = config.mode.get match {
@@ -111,9 +114,9 @@ object Runner extends LazyLogging{
     }
     val results = algorithm.selectFeatures(dataSet)
     logger.info("Feature Ranking:")
-    results.zipWithIndex.foreach{
+    results.zipWithIndex.foreach {
       case (f, idx) =>
-        logger.info(s"\t${idx+1} - ${dataSet.instances.attribute(idx).name} ($f)")
+        logger.info(s"\t${idx + 1} - ${dataSet.instances.attribute(idx).name} ($f)")
     }
   }
 
@@ -133,7 +136,7 @@ object Runner extends LazyLogging{
       opt[Int]('k', "subsetSize").action((x, c) =>
         c.copy(subsetSize = x)).text("sample set size")
 
-      opt[Unit]("nonorm").action( (x, c) =>
+      opt[Unit]("nonorm").action((x, c) =>
         c.copy(shouldNormalize = false)).text("flag to indicate that no normalization of the data set is necessary")
 
       arg[File]("<file>...").action((x, c) =>
@@ -142,16 +145,16 @@ object Runner extends LazyLogging{
       help("help").text("prints this usage text")
 
       cmd("arff").
-        action( (_, c) => c.copy(mode = Some(ArffDataSet())) ).
+        action((_, c) => c.copy(mode = Some(ArffDataSet()))).
         text("arff data set analysis")
 
       cmd("csv").
-        action( (x, c) => c.copy(mode = Some(CSVDataSet())) ).
+        action((x, c) => c.copy(mode = Some(CSVDataSet()))).
         text("csv data set analysis").
         children(
-          opt[Boolean]('h', "header").action( (x, c) =>
-            c.modifyMode[CSVDataSet](_.copy(hasHeader = x)) ).text("defines if the csv has a header line"),
-          opt[Seq[Int]]('z', "nominals").valueName("<nom1>,<nom2>...").action( (x,c) =>
+          opt[Boolean]('h', "header").action((x, c) =>
+            c.modifyMode[CSVDataSet](_.copy(hasHeader = x))).text("defines if the csv has a header line"),
+          opt[Seq[Int]]('z', "nominals").valueName("<nom1>,<nom2>...").action((x, c) =>
             c.modifyMode[CSVDataSet](_.copy(nominalFeatures = x))).text("xyz is a boolean property")
         )
 
