@@ -1,4 +1,4 @@
-package de.hpi.kdd.rar.util
+package de.hpi.kddm.rar.util
 
 import scala.collection.mutable
 

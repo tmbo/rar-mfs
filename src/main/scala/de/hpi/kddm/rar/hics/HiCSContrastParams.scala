@@ -1,7 +1,7 @@
 /*
  * Copyright (C) Tom Bocklisch <https://github.com/tmbo>
  */
-package de.hpi.kdd.rar.hics
+package de.hpi.kddm.rar.hics
 
 case class HicsContrastPramsFA(numIterations: Int, maxRetries: Double, alphaFixed: Double, maxInstances: Int) extends HiCSContrastParams {
   def alpha(numInstances: Int) = {

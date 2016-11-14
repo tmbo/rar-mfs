@@ -1,8 +1,8 @@
-package de.hpi.kdd.rar
+package de.hpi.kddm.rar
 
 import com.typesafe.scalalogging.LazyLogging
-import de.hpi.kdd.rar.RaRSearch.RelevanceScore
-import de.hpi.kdd.rar.util.TimeMeasurement
+import de.hpi.kddm.rar.RaRSearch.RelevanceScore
+import de.hpi.kddm.rar.util.TimeMeasurement
 
 trait RelevanceReasoner extends LazyLogging with TimeMeasurement {
 

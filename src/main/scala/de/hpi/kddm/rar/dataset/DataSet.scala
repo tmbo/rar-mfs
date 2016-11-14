@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2016 Tom Bocklisch <https://github.com/tmbo>
  */
-package de.hpi.kdd.rar.dataset
+package de.hpi.kddm.rar.dataset
 
 import com.typesafe.scalalogging.LazyLogging
 import weka.core.Instances

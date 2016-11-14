@@ -1,18 +1,18 @@
 /*
  * Copyright (C) Tom Bocklisch <https://github.com/tmbo>
  */
-package de.hpi.kdd.rar
+package de.hpi.kddm.rar
 
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicInteger
 
 import com.typesafe.scalalogging.LazyLogging
 
-import de.hpi.kdd.rar.RaRSearch._
-import de.hpi.kdd.rar.util.ImplicitExtensions._
-import de.hpi.kdd.rar.dataset.{ContinuousFeature, NominalFeature, SearchSpace, SubSpace}
-import de.hpi.kdd.rar.hics.stattest.{KLTest, KSTest}
-import de.hpi.kdd.rar.hics.{HiCSContrastMeasure, HiCSContrastParams}
+import de.hpi.kddm.rar.RaRSearch._
+import de.hpi.kddm.rar.util.ImplicitExtensions._
+import de.hpi.kddm.rar.dataset.{ContinuousFeature, NominalFeature, SearchSpace, SubSpace}
+import de.hpi.kddm.rar.hics.stattest.{KLTest, KSTest}
+import de.hpi.kddm.rar.hics.{HiCSContrastMeasure, HiCSContrastParams}
 
 import scala.collection.immutable.BitSet
 import scala.collection.mutable.ArrayBuffer

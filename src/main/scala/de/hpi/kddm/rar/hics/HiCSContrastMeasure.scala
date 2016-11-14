@@ -1,8 +1,8 @@
-package de.hpi.kdd.rar.hics
+package de.hpi.kddm.rar.hics
 
 import com.typesafe.scalalogging.LazyLogging
-import de.hpi.kdd.rar.dataset.{Feature, SubSpace}
-import de.hpi.kdd.rar.hics.stattest.StatTest
+import de.hpi.kddm.rar.dataset.{Feature, SubSpace}
+import de.hpi.kddm.rar.hics.stattest.StatTest
 
 object HiCSContrastMeasure extends LazyLogging {
   def calculateContrast[F <: Feature](

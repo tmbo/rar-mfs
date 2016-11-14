@@ -2,12 +2,12 @@
  * Copyright (c) 2016 Tom Bocklisch <https://github.com/tmbo>
  */
 
-package de.hpi.kdd.rar.hics.stattest
+package de.hpi.kddm.rar.hics.stattest
 
 import com.typesafe.scalalogging.LazyLogging
-import de.hpi.kdd.rar.dataset.{NominalFeature, SubSpace}
-import de.hpi.kdd.rar.hics.IndexSelection
-import de.hpi.kdd.rar.util.{Statistics, TimeMeasurement}
+import de.hpi.kddm.rar.dataset.{NominalFeature, SubSpace}
+import de.hpi.kddm.rar.hics.IndexSelection
+import de.hpi.kddm.rar.util.{Statistics, TimeMeasurement}
 
 /**
   * Use the Kullback–Leibler divergence to compute the differences in value distributions between marginal and

@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Tom Bocklisch <https://github.com/tmbo>
  */
 
-package de.hpi.kdd.rar.util
+package de.hpi.kddm.rar.util
 
 import com.typesafe.scalalogging.Logger
 

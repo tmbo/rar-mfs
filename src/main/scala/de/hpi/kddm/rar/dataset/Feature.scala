@@ -2,12 +2,12 @@
  * Copyright (c) 2016 Tom Bocklisch <https://github.com/tmbo>
  */
 
-package de.hpi.kdd.rar.dataset
+package de.hpi.kddm.rar.dataset
 
 import java.util
 
 import com.typesafe.scalalogging.LazyLogging
-import de.hpi.kdd.rar.util.Statistics
+import de.hpi.kddm.rar.util.Statistics
 import weka.core.{Attribute, Instances}
 
 trait Feature {

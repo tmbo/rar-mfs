@@ -1,13 +1,13 @@
 /*
  * Copyright (C) Tom Bocklisch <https://github.com/tmbo>
  */
-package de.hpi.kdd.rar.hics.stattest
+package de.hpi.kddm.rar.hics.stattest
 
 import java.util.Random
 
 import com.typesafe.scalalogging.LazyLogging
-import de.hpi.kdd.rar.dataset.{ContinuousFeature, SubSpace}
-import de.hpi.kdd.rar.hics.IndexSelection
+import de.hpi.kddm.rar.dataset.{ContinuousFeature, SubSpace}
+import de.hpi.kddm.rar.hics.IndexSelection
 
 case class KSTest(
                    N: Int,

@@ -3,10 +3,9 @@ package de.hpi.kddm.rar
 import java.io.{BufferedReader, File, FileReader}
 
 import com.typesafe.scalalogging.LazyLogging
-import de.hpi.kdd.rar.RaRSearch
-import de.hpi.kdd.rar.RaRSearch.RaRParamsFixed
-import de.hpi.kdd.rar.dataset.WekaDataSet
-import de.hpi.kdd.rar.hics.HicsContrastPramsFA
+import de.hpi.kddm.rar.RaRSearch.RaRParamsFixed
+import de.hpi.kddm.rar.dataset.WekaDataSet
+import de.hpi.kddm.rar.hics.HicsContrastPramsFA
 import weka.core.Instances
 import weka.core.converters.CSVLoader
 import weka.filters.Filter

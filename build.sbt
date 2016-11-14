@@ -2,7 +2,7 @@ import sbtrelease.ReleasePlugin.autoImport.ReleaseTransformations._
 
 name := "rar-mfs"
 
-version := "1.0-SNAPSHOT"
+version := "1.0.1"
 
 organization := "de.hpi.kddm"
 

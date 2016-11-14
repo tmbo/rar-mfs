@@ -1,13 +1,13 @@
 /*
  * Copyright (C) Tom Bocklisch <https://github.com/tmbo>
  */
-package de.hpi.kdd.rar.hics
+package de.hpi.kddm.rar.hics
 
 import java.util
 
 import com.typesafe.scalalogging.LazyLogging
-import de.hpi.kdd.rar.dataset.{ContinuousFeature, Feature, NominalFeature}
-import de.hpi.kdd.rar.util.ImplicitExtensions._
+import de.hpi.kddm.rar.dataset.{ContinuousFeature, Feature, NominalFeature}
+import de.hpi.kddm.rar.util.ImplicitExtensions._
 
 import scala.reflect.ClassTag
 import scala.util.Random

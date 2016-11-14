@@ -2,10 +2,10 @@
  * Copyright (c) 2016 Tom Bocklisch <https://github.com/tmbo>
  */
 
-package de.hpi.kdd.rar.hics.stattest
+package de.hpi.kddm.rar.hics.stattest
 
-import de.hpi.kdd.rar.dataset.{Feature, SubSpace}
-import de.hpi.kdd.rar.hics.IndexSelection
+import de.hpi.kddm.rar.dataset.{Feature, SubSpace}
+import de.hpi.kddm.rar.hics.IndexSelection
 
 /**
   * Functionality to compute the dependence of cmpAttr with respect to the subSpace using the instances selected in a
