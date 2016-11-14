@@ -1,4 +1,4 @@
-# Relevance and Redundancy Framework (rar-mfs)
+# Relevance and Redundancy Framework (rar-mfs) [![Build Status](https://travis-ci.org/tmbo/rar-mfs.svg?branch=master)](https://travis-ci.org/tmbo/rar-mfs)
 rar-mfs is an algorithm for feature selection and can be employed to select features from labled data sets. 
 
 The Relevance and Redundancy Framework (RaR), which is the theory behind the implementation, is a novel feature selection algorithm that 
