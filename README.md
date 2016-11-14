@@ -7,40 +7,40 @@ The Relevance and Redundancy Framework (RaR), which is the theory behind the imp
 - handles multivariate correlations.
 
 ## Installation
-The tool is written in scala and uses the weka framework to load and handle data sets. You can either run it independently providing the data as an `.arff` or `.csv` file or you can include the algorithm as a (maven / ivy) dependency in your project
+The tool is written in scala and uses the weka framework to load and handle data sets. You can either run it independently providing the data as an `.arff` or `.csv` file or you can include the algorithm as a (maven / ivy) dependency in your project. As an example data set we use [heart-c](http://www.cs.umb.edu/~rickb/files/UCI/heart-c.arff).
 
 ### Project dependency
 TODO: reference published maven central build
 
 ### Command line tool
-- EITHER build the repository on your own: 
-    1. make sure [sbt](http://www.scala-sbt.org/) is installed 
-    2. clone repository 
-    3. run `sbt run`
-    
-   Simple example using sbt directly after cloning the repository:
-    ```sh
-    rar-mfs > sbt "run arff --samples 100 --subsetSize 5 --nonorm example-dataset/heart-c.arff"
-    Feature Ranking:
-      1 - age (12)
-      2 - sex (8)
-      3 - cp (11)
-      ...
-    ``` 
-- OR download the prebuild binary which requires only an installation of a recent java version (>= 6)
-    1. download the prebuild jar from the [releases tab](https://github.com/tmbo/rar-mfs/releases)
+- EITHER download the prebuild binary which requires only an installation of a recent java version (>= 6)
+    1. download the prebuild jar from the releases tab ([latest](https://github.com/tmbo/rar-mfs/releases/download/v1.0/rar-mfs-1.0.jar))
     2. run `java -jar rar-mfs-1.0.jar --help`
 
-    Using the prebuild jar, our previous example gets even easier:
+    Using the prebuild jar, here is an example usage:
     ```sh
-    rar-mfs > java -jar rar-mfs-1.0.jar arff --samples 100 --subsetSize 5 --nonorm example-dataset/heart-c.arff
+    rar-mfs > java -jar rar-mfs-1.0.jar arff --samples 100 --subsetSize 5 --nonorm heart-c.arff
     Feature Ranking:
       1 - age (12)
       2 - sex (8)
       3 - cp (11)
       ...
     ```
- 
+- OR build the repository on your own: 
+    1. make sure [sbt](http://www.scala-sbt.org/) is installed 
+    2. clone repository 
+    3. run `sbt run`
+    
+   Simple example using sbt directly after cloning the repository:
+    ```sh
+    rar-mfs > sbt "run arff --samples 100 --subsetSize 5 --nonorm heart-c.arff"
+    Feature Ranking:
+      1 - age (12)
+      2 - sex (8)
+      3 - cp (11)
+      ...
+    ``` 
+
 ## Algorithm
 ### Idea
 Abstract overview of the different steps of the proposed feature selection algorithm:
