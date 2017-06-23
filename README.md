@@ -40,12 +40,12 @@ algorithm.selectFeatures(dataSet)
 
 ### Command line tool
 - EITHER download the prebuild binary which requires only an installation of a recent java version (>= 6)
-    1. download the prebuild jar from the releases tab ([latest](https://github.com/tmbo/rar-mfs/releases/download/v1.0/rar-mfs-1.0.jar))
-    2. run `java -jar rar-mfs-1.0.jar --help`
+    1. download the prebuild jar from the releases tab ([latest](https://github.com/tmbo/rar-mfs/releases/download/v1.0.2/rar-mfs-1.0.2.jar))
+    2. run `java -jar rar-mfs-1.0.2.jar--help`
 
     Using the prebuild jar, here is an example usage:
     ```sh
-    rar-mfs > java -jar rar-mfs-1.0.jar arff --samples 100 --subsetSize 5 --nonorm heart-c.arff
+    rar-mfs > java -jar rar-mfs-1.0.2.jar arff --samples 100 --subsetSize 5 --nonorm heart-c.arff
     Feature Ranking:
       1 - age (12)
       2 - sex (8)
