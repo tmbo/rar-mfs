@@ -16,13 +16,13 @@ The project is published to maven central ([link](http://search.maven.org/#searc
     <dependency>
       <groupId>de.hpi.kddm</groupId>
       <artifactId>rar-mfs_2.11</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     ```
     
 - sbt:
     ```sbt
-    libraryDependencies += "de.hpi.kddm" %% "rar-mfs" % "1.0.1"
+    libraryDependencies += "de.hpi.kddm" %% "rar-mfs" % "1.0.2"
     ```
   
 To run the algorithm use
@@ -37,7 +37,6 @@ val algorithm = new RaRSearch(
 
 algorithm.selectFeatures(dataSet)
 ```
-WARN: there is still a dependency that is not published to maven central (optimus). To use the package you need to locally publish my optimus fork ([link](https://github.com/tmbo/Optimus/tree/development), pending for merge).
 
 ### Command line tool
 - EITHER download the prebuild binary which requires only an installation of a recent java version (>= 6)
