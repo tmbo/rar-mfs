@@ -65,8 +65,9 @@ libraryDependencies ++= Seq(
   ("nz.ac.waikato.cms.weka" % "weka-stable" % "3.8.0").exclude("nz.ac.waikato.cms.weka.thirdparty", "thirdparty"),
   "ch.qos.logback" % "logback-classic" % "1.1.7",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.4.0",
-  "com.github.vagm" %% "optimus" % "2.0.0-SNAPSHOT",
-  "com.github.vagm" %% "optimus-solver-gurobi" % "2.0.0-SNAPSHOT",
+  "com.github.vagmcs" %% "optimus" % "2.0.0",
+  "com.github.vagmcs" %% "optimus-solver-oj" % "2.0.0",
+  "com.github.vagmcs" %% "optimus-solver-gurobi" % "2.0.0",
   "org.apache.commons" % "commons-lang3" % "3.4",
   "com.github.scopt" %% "scopt" % "3.5.0"
 )

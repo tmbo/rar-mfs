@@ -15,7 +15,7 @@ trait RelevanceReasoner extends LazyLogging with TimeMeasurement {
     val useGurobi = try {
       solvers.contains(SolverLib.gurobi)
     } catch {
-      case _: java.lang.UnsatisfiedLinkError | _: Exception =>
+      case _: java.lang.UnsatisfiedLinkError | _: Exception | _: java.lang.NoClassDefFoundError =>
         false
     }
 
